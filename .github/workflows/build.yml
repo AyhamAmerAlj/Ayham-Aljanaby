@@ -23,7 +23,7 @@ jobs:
         with:
           gradle-version: "8.9"
       - name: Build release APK
-        run: cd "$DIR" && gradle assembleRelease --no-daemon --stacktrace
+        run: cd "$DIR" && gradle assembleRelease --no-daemon
       - name: Copy APK
         run: cp "$DIR"/app/build/outputs/apk/release/app-release.apk AyhamPlayer.apk
       - uses: softprops/action-gh-release@v2
